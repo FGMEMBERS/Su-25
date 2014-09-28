@@ -1,0 +1,15 @@
+<PropertyList>
+
+    <path>Gunsight.ac</path>
+    
+    <animation>
+        <type>material</type>
+        <object-name>Sight</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>1.0</green>
+            <blue>1.0</blue>
+        </emission>
+    </animation>
+
+</PropertyList>
