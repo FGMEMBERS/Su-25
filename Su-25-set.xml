@@ -8,7 +8,7 @@
 	
 		<description>Sukhoi Su-25</description>
 		<author>Petar Jedvaj, Stuart Cassie, Raptor and Gary Brown</author>
-		<status>1.3.1</status>
+		<status>1.3.5</status>
 		
 		<rating>
 			<FDM type="int">3</FDM>
@@ -374,12 +374,17 @@
 			</key>
 			
 			<key>
+				<name>e</name>
+				<desc>Eject</desc>
+			</key>
+			
+			<key>
 				<name>f</name>
 				<desc>Gun trigger</desc>
 			</key>
 			
 			<key>
-				<name>e</name>
+				<name>d</name>
 				<desc>Fire UB-32 rocket pod</desc>
 			</key>
 			
@@ -445,8 +450,8 @@
 				</binding>
 			</key>
 			
-			<key n="101">
-				<name>e</name>
+			<key n="100">
+				<name>d</name>
 				<desc>Fire UB-32 rocket pod</desc>
 				<binding>
 					<command>nasal</command>
@@ -458,6 +463,15 @@
 						<script>guns.stop_Rocket()</script>
 					</binding>
 				</mod-up>
+			</key>
+			
+			<key n="101">
+				<name>e</name>
+				<desc>Eject</desc>
+				<binding>
+					<command>nasal</command>
+					<script>Eject.eject();</script>
+				</binding>
 			</key>
 			
 			<key n="102">
@@ -644,6 +658,11 @@
 		<enav>
 			<selected type="int">3</selected>
 		</enav>
+		
+		<rwr>
+			<display-lighting-intens type="double">0.4</display-lighting-intens>
+			<symbology-lighting-intens type="double">1</symbology-lighting-intens>
+		</rwr>
 	</instrumentation>
 	
 	<!-- Effects -->
@@ -678,13 +697,20 @@
 	
 	<nasal>
 		<Su-25>
-			<file>Aircraft/Su-25/Nasal/lights.nas</file>
 			<file>Aircraft/Su-25/Nasal/liveries.nas</file>
 		</Su-25>
+		
+	    <lights>
+	    	<file>Aircraft/Su-25/Nasal/Lights.nas</file>
+	    </lights>
 		
 		<canopy>
 			<file>Aircraft/Su-25/Nasal/canopy.nas</file>
 		</canopy>
+		
+		<Eject>
+			<file>Aircraft/Su-25/Nasal/eject.nas</file>
+		</Eject>
 		
 		<tyresmoke>
 			<file>Aircraft/Su-25/Nasal/tyresmoke.nas</file>
@@ -693,6 +719,10 @@
 		<guns>
 			<file>Aircraft/Su-25/Nasal/weapons.nas</file>
 		</guns>
+		
+		<rwr>
+			<file>Aircraft/Su-25/Nasal/rwr.nas</file>
+		</rwr>
 
 		<low>
 			<file>Aircraft/Su-25/Nasal/low.nas</file>

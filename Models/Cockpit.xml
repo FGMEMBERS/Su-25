@@ -6,6 +6,7 @@
 
 	<!-- Pilot -->
 	
+	<object-name>Pilot</object-name>
 	<model>
 		<path>Aircraft/Su-25/Models/Pilot/Pilot.xml</path>
 		<offsets>
